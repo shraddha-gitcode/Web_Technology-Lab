@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Re-Read</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="navbar">
+    <div class="logo">
+        <img src="logo.jpg" alt="Re-Read Logo" class="logo-img">
+        <div>
+            <h2>Re-Read</h2>
+            <span>Pre-loved stories, new beginnings</span>
+        </div>
+    </div>
+    <div class="nav-right">
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#books">Popular Books</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#journey">Journey</a>
+            <a href="#bookmarks">Bookmarks</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button id="loginBtn" class="login-trigger">Login</button>
+    </div>
+</header>
+
+<!-- Login Modal -->
+<div id="loginModal" class="modal-overlay">
+    <div class="login-container">
+        <button id="closeModal" class="close-btn">×</button>
+        <div class="login-header">
+            <img src="logo.jpg" alt="Re-Read Logo" class="login-logo">
+            <h2>Welcome Back</h2>
+            <p class="login-subtitle">Continue your reading journey</p>
+        </div>
+        
+        <div class="login-tabs">
+            <button class="tab-btn active" data-tab="login">Login</button>
+            <button class="tab-btn" data-tab="signup">Create Account</button>
+        </div>
+
+        <!-- Login Form -->
+        <form id="loginForm" class="tab-content active">
+            <div class="input-group">
+                <input type="text" id="loginUserId" placeholder="User ID" required>
+                <span class="input-icon">👤</span>
+            </div>
+            <div class="input-group">
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <span class="input-icon">🔒</span>
+            </div>
+            <button type="submit" class="login-btn">Sign In</button>
+        </form>
+
+        <!-- Signup Form -->
+        <form id="signupForm" class="tab-content">
+            <div class="input-group">
+                <input type="text" id="signupUserId" placeholder="Choose User ID" required>
+                <span class="input-icon">👤</span>
+            </div>
+            <div class="input-group">
+                <input type="email" id="signupEmail" placeholder="Email (optional)" required>
+                <span class="input-icon">✉️</span>
+            </div>
+            <div class="input-group">
+                <input type="tel" id="signupPhone" placeholder="Phone Number" required>
+                <span class="input-icon">📱</span>
+            </div>
+            <div class="input-group">
+                <select id="signupState" required>
+                    <option value="">Select State</option>
+                    <option value="maharashtra">Maharashtra</option>
+                    <option value="gujarat">Gujarat</option>
+                    <option value="karnataka">Karnataka</option>
+                    <option value="tamil-nadu">Tamil Nadu</option>
+                    <option value="kerala">Kerala</option>
+                    <option value="delhi">Delhi</option>
+                    <option value="rajasthan">Rajasthan</option>
+                    <option value="uttar-pradesh">Uttar Pradesh</option>
+                    <option value="punjab">Punjab</option>
+                    <option value="other">Other</option>
+                </select>
+                <span class="input-icon">📍</span>
+            </div>
+            <div class="input-group">
+                <input type="text" id="signupCity" placeholder="City" required>
+                <span class="input-icon">🏙️</span>
+            </div>
+            <div class="input-group">
+                <input type="text" id="signupPincode" placeholder="Pincode (6 digits)" maxlength="6" required>
+                <span class="input-icon">📮</span>
+            </div>
+            <div class="input-group">
+                <input type="password" id="signupPassword" placeholder="Create Password" required>
+                <span class="input-icon">🔒</span>
+            </div>
+            <div class="input-group">
+                <input type="password" id="signupConfirmPassword" placeholder="Confirm Password" required>
+                <span class="input-icon">✅</span>
+            </div>
+            <button type="submit" class="login-btn">Create Account</button>
+        </form>
+    </div>
+</div>
+
+<!-- Rest of your HTML remains exactly the same -->
+<section id="home" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+        <img src="logo.jpg" alt="Re-Read" class="hero-logo">
+        <h1><p class="small">WELCOME TO</p> Re-Read</h1>
+        <p class="sub">Where every book has a story before its story begins</p>
+        <p class="desc">We believe pre-loved books carry magic and memory. Each one is ready for its next chapter.</p>
+        <button>Explore Our Collection</button>
+    </div>
+</section>
+
+<section id="books" class="section">
+    <p class="small green">DISCOVER</p>
+    <h2>Popular Books</h2>
+    <div class="book-grid">
+        <div class="book-card">
+            <img src="Red Flags and Rishtas.jpg" alt="Red Flags & Rishtas book cover">
+            <h3>Red Flags & Rishtas</h3>
+            <p>Modern love, relationships, and warning signs we ignore.</p>
+            <div class="price">₹299</div>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+        <div class="book-card">
+            <img src="How to kill your family.png" alt="How to Kill Your Family book cover">
+            <h3>How to Kill Your Family</h3>
+            <p>Dark humor, revenge, and sharp satire.</p>
+            <div class="price">₹349</div>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+        <div class="book-card">
+            <img src="booklovers.jpg" alt="Book Lovers book cover">
+            <h3>Book Lovers</h3>
+            <p>A warm romance for people who love stories.</p>
+            <div class="price">₹279</div>
+            <button class="cart-btn">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+<section id="reviews" class="section light">
+    <p class="small green">FROM OUR READERS</p>
+    <h2>Stories of Connection</h2>
+    <div class="review-grid">
+        <div class="review-card">
+            "The handwritten note tucked inside the book felt like a whisper meant only for me. I paused before even turning the first page, just holding it, reading those few heartfelt lines again and again. It didn't feel like a purchase, it felt like something chosen with care, like the story had already begun before I started reading."
+            <span>— Sarah M.</span>
+        </div>
+        <div class="review-card">
+            "This store feels less like a shop and more like a quiet corner of the world where stories wait patiently for the right hands. Every detail, from the packaging to the bookmark, felt thoughtful and warm. You can feel that these books are loved, not just sold."
+            <span>— James L.</span>
+        </div>
+        <div class="review-card">
+            "A pre-loved book feels alive in a way brand-new ones sometimes don't. As I read, I kept imagining who held it before me, who folded that tiny corner, who might have stopped at the same sentence that made me stare at the ceiling in thought. It felt like a quiet conversation across time."
+            <span>— Emma T.</span>
+        </div>
+    </div>
+</section>
+
+<section id="journey" class="section journey">
+    <img src="me.jpeg" alt="My reading journey photo" class="journey-img">
+    <div class="journey-text">
+        <p class="small green">MY STORY</p>
+        <h2>My Reading Journey</h2>
+        <p>Books became more than paper and ink for me; they became sanctuaries, secret confidants, and silent companions. From the tender days of tenth grade, when motivational reads lit a fire in my spirit, they whispered courage into my veins and urged me to chase brilliance in studies, to dream of medicine, to believe in the impossible. 
+        
+        Then, like fate disguised as friendship, a gentle nudge from a friend carried me beyond the realm of self-help into the boundless skies of fiction. The very first spell was cast by Harry Potter and the Philosopher's Stone, a doorway to magic, wonder, and endless adventures that refused to end when the last page closed. That single book became a key, unlocking worlds where imagination soared higher than ambition, where stories stitched themselves into the fabric of my soul. 
+        
+        Since then, my shelves have blossomed into gardens of wisdom and wonder. Among them rests The Forty Rules of Love, a book that does not merely sit—it breathes, it sings, it teaches the heart to listen to silence and the soul to dance with eternity. Each title I've held close is more than a possession; it is a chapter of my journey, a mirror of my thoughts, a vessel of my dreams. 
+        
+        And now, as I pass on my pre-loved books, I am not merely giving away bound pages. I am offering fragments of myself—my highlights, my scribbled notes in the margins, my laughter tucked between paragraphs, my tears pressed into paper fibers. These books carry my footprints, my echoes, my imagination. 
+        
+        So let us connect, not just as readers but as wanderers of worlds. Let us swap stories, trade dreams, and weave together a tapestry of shared adventures. For in every exchanged book lies a bridge—between your heart and mine, between solitude and companionship, between the past we lived and the futures we dare to write!💕</p>
+    </div>
+</section>
+
+<section id="bookmarks" class="section">
+    <p class="small green">OUR PHILOSOPHY</p>
+    <h2>Why Pre-Loved Books Are Beautiful</h2>
+    <p>Books carry traces of past readers—folded corners, highlights, and memories. Stories don't end; they travel to new hearts.</p>
+    <div class="philo-images">
+        <img src="bookmark.jpg" alt="Pre-loved book detail 1">
+        <img src="letters.jpg" alt="Pre-loved book detail 2">
+        <img src="bg1.jpg" alt="Pre-loved book detail 3">
+    </div>
+</section>
+
+<section id="contact" class="section light">
+    <p class="small green">GET IN TOUCH</p>
+    <h2>Let's Connect</h2>
+    <div class="features">
+        <div class="feature">
+            <img src="insta.jpg" alt="Instagram icon" class="contact-icon">
+            <div>Instagram: @Re-Read</div>
+        </div>
+        <div class="feature">
+            <img src="gmail.jpg" alt="Email icon" class="contact-icon">
+            <div>Email: shraddha@Re-Read.com</div>
+        </div>
+        <div class="feature">
+            <img src="location.jpg" alt="Location icon" class="contact-icon">
+            <div>Location: Shirdi, Maharashtra</div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <h3>Re-Read</h3>
+    <p>Pre-loved stories, new beginnings. Share your journey with us today.</p>
+    <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#books">Books</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <p>Made with Love</p>
+    <p>&copy; 2026 Re-Read. All stories cherished.</p>
+</footer>
+
+<script>
+document.querySelectorAll(".cart-btn").forEach(btn=>{
+    btn.addEventListener("click",()=>alert("Book added to cart 🛒"));
+});
+
+// Smooth scrolling
+document.querySelectorAll('nav a[href^="#"], .footer-links a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+    });
+});
+
+// LOGIN MODAL FUNCTIONALITY
+const loginBtn = document.getElementById('loginBtn');
+const loginModal = document.getElementById('loginModal');
+const closeModal = document.getElementById('closeModal');
+const tabBtns = document.querySelectorAll('.tab-btn');
+const loginForm = document.getElementById('loginForm');
+const signupForm = document.getElementById('signupForm');
+
+// Open modal
+loginBtn.addEventListener('click', () => {
+    loginModal.classList.add('show');
+    document.body.style.overflow = 'hidden';
+});
+
+// Close modal
+closeModal.addEventListener('click', closeLoginModal);
+loginModal.addEventListener('click', (e) => {
+    if (e.target === loginModal) closeLoginModal();
+});
+
+function closeLoginModal() {
+    loginModal.classList.remove('show');
+    document.body.style.overflow = '';
+    clearErrors();
+}
+
+// Tab switching
+tabBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        const tab = btn.dataset.tab;
+        tabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.querySelectorAll('.tab-content').forEach(content => {
+            content.classList.remove('active');
+        });
+        document.getElementById(tab + 'Form').classList.add('active');
+        clearErrors();
+    });
+});
+
+// Enhanced Validation functions
+function validateField(field, customValidation = null) {
+    const value = field.value.trim();
+    const errorEl = field.parentNode.querySelector('.error-message');
+    
+    if (!value) {
+        showError(field, 'This field is required');
+        return false;
+    }
+    
+    // Custom validation for specific fields
+    if (customValidation) {
+        const isValid = customValidation(value);
+        if (!isValid.valid) {
+            showError(field, isValid.message);
+            return false;
+        }
+    }
+    
+    // Email validation
+    if (field.type === 'email' && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) {
+        showError(field, 'Please enter a valid email');
+        return false;
+    }
+    
+    // Phone validation (10 digits, Indian format)
+    if (field.id === 'signupPhone') {
+        if (!/^[6-9]\d{9}$/.test(value)) {
+            showError(field, 'Phone must be 10 digits starting with 6-9');
+            return false;
+        }
+    }
+    
+    // Pincode validation (6 digits)
+    if (field.id === 'signupPincode') {
+        if (!/^\d{6}$/.test(value)) {
+            showError(field, 'Pincode must be exactly 6 digits');
+            return false;
+        }
+    }
+    
+    // Password validation
+    if (field.id.includes('Password')) {
+        if (value.length < 6) {
+            showError(field, 'Password must be at least 6 characters');
+            return false;
+        }
+        if (!/(?=.*[a-zA-Z])(?=.*\d)/.test(value)) {
+            showError(field, 'Password must contain letters and numbers');
+            return false;
+        }
+    }
+    
+    hideError(field);
+    return true;
+}
+
+function showError(field, message) {
+    field.classList.add('error');
+    let errorEl = field.parentNode.querySelector('.error-message');
+    if (!errorEl) {
+        errorEl = document.createElement('span');
+        errorEl.className = 'error-message';
+        field.parentNode.appendChild(errorEl);
+    }
+    errorEl.textContent = message;
+}
+
+function hideError(field) {
+    field.classList.remove('error');
+    const errorEl = field.parentNode.querySelector('.error-message');
+    if (errorEl) errorEl.remove();
+}
+
+function clearErrors() {
+    document.querySelectorAll('.error, .error-message').forEach(el => {
+        el.classList.remove('error');
+        if (el.classList.contains('error-message')) el.remove();
+    });
+}
+
+// Form submissions
+loginForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const userId = document.getElementById('loginUserId');
+    const password = document.getElementById('loginPassword');
+    if (validateField(userId) && validateField(password)) {
+        alert('Welcome back to Re-Read! 🎉\n\nUser ID: ' + userId.value);
+        closeLoginModal();
+    }
+});
+
+signupForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const userId = document.getElementById('signupUserId');
+    const email = document.getElementById('signupEmail');
+    const phone = document.getElementById('signupPhone');
+    const state = document.getElementById('signupState');
+    const city = document.getElementById('signupCity');
+    const pincode = document.getElementById('signupPincode');
+    const password = document.getElementById('signupPassword');
+    const confirmPassword = document.getElementById('signupConfirmPassword');
+    
+    let isValid = validateField(userId) && 
+                  validateField(email) && 
+                  validateField(phone) && 
+                  validateField(state) &&
+                  validateField(city) &&
+                  validateField(pincode) &&
+                  validateField(password) && 
+                  validateField(confirmPassword);
+    
+    if (isValid && password.value !== confirmPassword.value) {
+        showError(confirmPassword, 'Passwords do not match');
+        isValid = false;
+    }
+    
+    if (isValid) {
+        const userData = {
+            userId: userId.value,
+            email: email.value,
+            phone: phone.value,
+            state: state.options[state.selectedIndex].text,
+            city: city.value,
+            pincode: pincode.value
+        };
+        alert('Account created successfully! 🎉\n\nUser ID: ' + userId.value + 
+              '\nPhone: ' + phone.value + 
+              '\nLocation: ' + city.value + ', ' + state.options[state.selectedIndex].text + ' - ' + pincode.value +
+              '\n\nYou can now login with these credentials.');
+        closeLoginModal();
+    }
+});
+
+// Real-time validation
+document.querySelectorAll('#loginModal input, #loginModal select').forEach(input => {
+    input.addEventListener('blur', () => validateField(input));
+    input.addEventListener('input', () => {
+        if (input.classList.contains('error')) validateField(input);
+    });
+});
+
+// Select styling fix
+document.getElementById('signupState').addEventListener('change', function() {
+    if (this.value) {
+        hideError(this);
+    }
+});
+</script>
+</body>
+</html>
